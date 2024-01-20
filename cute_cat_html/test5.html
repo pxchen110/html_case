@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        position: fixed; 
+        z-index: 2;
+        top: 0;
+        border: 1px solid lightblue;
+        background-color: lightblue;
+        width: 100%; /*fill all broswer*/
+        height: 50px;
+    }
+    .t-container { /*the uppest element*/
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        align-content: flex-start;
+        margin: 50px;
+        margin-top: 200px; /*solving position:fixed covering problem*/
+        width:auto;
+    }
+    .t-container1,.t-container2,.t-container3,.t-container4 {  
+        margin: auto; /*share left space equally*/
+        border: 1px solid lightblue;
+        border-radius: 10%;
+        width: 300px;
+        height: 400px;    
+    }
+    .t-head {
+        width: 100px;
+        margin: auto; /*均分省剩下空間，置中*/
+        padding: 10px;
+        text-align: center; 
+    } 
+    .t-content { 
+        position: relative;
+        margin-left: 25px;
+        margin-right:25px;
+        width: 250px;
+        height: 250px;
+    } 
+    img { 
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .t-skill {
+        width: 250px;
+        margin: auto;
+        text-align: center;
+    }
+    .t-vote-but {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        padding: 10px;
+        border: solid lightpink;
+        width: 200px;
+        background-color: lightpink;
+        text-align: center;
+        cursor: grab;
+    }
+    .t-vote-but:hover {
+        background-color: lightcoral;
+    } 
+</style>
+<body>
+    <h1 class="header">要來我家看貓嗎?</h1>
+
+    <div class="t-container">
+        <div class="t-container1">
+            <div class="t-head">可愛小貓1</div>
+            <div class="t-content"> <img src="./downloaded_cat_no1.jpg"  width="200px" ></div>
+            <div class="t-skill">專長: 後空翻、睡覺</div>
+            <button class="t-vote-but">非常可愛</button>
+        </div>
+
+        <div class="t-container2">
+            <div class="t-head">可愛小貓2</div>
+            <div class="t-content"> <img src="./downloaded_cat_no2.jpg"  width="200px"></div>
+            <div class="t-skill">專長: 吃東西、睡覺</div>
+            <button class="t-vote-but">非常可愛</button>
+        </div>
+
+        <div class="t-container3">
+            <div class="t-head">可愛小貓3</div>
+            <div class="t-content"> <img src="./downloaded_cat_no3.jpg"  width="200px"></div>
+            <div class="t-skill">專長: 吃東西、討摸摸</div>
+            <button class="t-vote-but">非常可愛</button>
+        </div>
+
+        <div class="t-container4">
+            <div class="t-head">可愛小貓4</div>
+            <div class="t-content"> <img src="./downloaded_cat_no4.jpg"  width="200px"></div>
+            <div class="t-skill">專長: 裝可愛、抓蟲</div>
+            <button class="t-vote-but" >非常可愛</button>
+        </div>        
+
+    </div>
+</body>
+</html>
